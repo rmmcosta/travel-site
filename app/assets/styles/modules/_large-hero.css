@@ -1,0 +1,15 @@
+.large-hero {
+    position: relative;
+}
+
+.large-hero__text-content {
+    /*on top of image centered*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    /*center horizontally*/
+    width: 100%;
+    text-align: center;
+    /*center vertically*/
+    transform: translateY(50%);
+}

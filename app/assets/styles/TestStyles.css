@@ -1,0 +1,22 @@
+$mainBlue: #2f5572;
+
+h3 {
+    color: $mainBlue;
+    background-color: green;
+    display: inline;
+    padding: 10px;
+    margin: 5px 10px;
+    box-shadow: 1px;
+    columns: 300px 2;
+}
+
+.box {
+    a {
+        display: block;
+        padding: 10px;
+    },
+
+    ul {
+        color: red;
+    }
+}

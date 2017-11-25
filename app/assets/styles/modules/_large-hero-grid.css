@@ -1,0 +1,15 @@
+.large-hero {
+    position: relative;
+    /*childs center vertically*/
+    display: flex;
+    align-items: center;
+}
+
+.large-hero__text-content {
+    /*on top of image centered*/
+    /*on top of image*/
+    position: absolute;
+    /*center horizontally*/
+    width: 100%;
+    text-align: center;
+}
