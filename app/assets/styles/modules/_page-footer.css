@@ -1,0 +1,12 @@
+.page-footer {
+    background-color: $mainBlue;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    font-size:0.65rem;
+    font-weight:200;
+
+    @mixin smallScreen {
+        font-size:1rem;
+    }
+}
