@@ -2,4 +2,13 @@
     padding:0 18px;
     max-width: 1200px;
     margin: 0 auto;
+
+    &--medium {
+        max-width: 974px;
+    }
+
+    /* a wrapper inside the original wrapper*/
+    .wrapper {
+        padding: 0 0;
+    }
 }
