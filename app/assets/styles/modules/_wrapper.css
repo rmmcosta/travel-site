@@ -4,11 +4,21 @@
     margin: 0 auto;
 
     &--medium {
-        max-width: 974px;
+        max-width: 976px;
     }
 
     /* a wrapper inside the original wrapper*/
     .wrapper {
         padding: 0 0;
     }
+
+    &--b-margin {
+
+        margin-bottom: 1rem;
+
+        @mixin smallScreen {
+            margin-bottom: 4rem;
+        }
+    }
+
 }

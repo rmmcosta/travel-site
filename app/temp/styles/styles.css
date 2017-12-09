@@ -466,6 +466,10 @@ img {
     height: auto;
 }
 
+a {
+    color: #D59642;
+}
+
 .large-hero {
     position: relative;
     /*childs center vertically*/
@@ -566,16 +570,29 @@ img {
     padding:0 18px;
     max-width: 1200px;
     margin: 0 auto;
+
 }
 
 .wrapper--medium {
-        max-width: 974px;
+        max-width: 976px;
     }
 
 /* a wrapper inside the original wrapper*/
 
 .wrapper .wrapper {
         padding: 0 0;
+    }
+
+.wrapper--b-margin {
+
+        margin-bottom: 1rem;
+    }
+
+@media (min-width: 530px) {
+
+.wrapper--b-margin {
+            margin-bottom: 4rem
+    }
     }
 
 .page-section {
@@ -626,11 +643,25 @@ img {
 
 .headline {
     font-weight: 300;
-    font-size: 1.875rem;
+    font-size: 1.475rem;
     color: #2f5572;
 }
 
 @media (min-width: 530px) {
+
+.headline {
+        font-size: 1.875rem
+}
+    }
+
+@media (min-width: 800px) {
+
+.headline {
+        font-size: 2.275rem
+}
+    }
+
+@media (min-width: 1200px) {
 
 .headline {
         font-size: 2.875rem
@@ -675,4 +706,62 @@ img {
 
 .headline--b-margin-large {
         margin-bottom: 1.6em;
+    }
+
+.headline--t-margin-none {
+        margin-top: 0;
+    }
+
+@media (min-width: 800px) {
+
+.row{
+        display: grid;
+        grid-template-columns: 4/12*100% 8/12*100%;
+        grid-template-areas:"sidebar content"
+}
+    }
+
+.row--gutters {
+        grid-gap: 5%;
+    }
+
+.row__sidebar {
+        grid-area: sidebar;
+        margin: 0 auto;
+        text-align: center;
+    
+    }
+
+.row__content {
+        grid-area: content;
+        position: relative;
+        text-align: left;
+    }
+
+.row__b-margin-until-medium {
+        margin-bottom: 0.5em;
+    }
+
+@media (min-width: 800px) {
+
+.row__b-margin-until-medium {
+            margin-bottom: 0
+    }
+    }
+
+.generic-content-container p {
+        line-height: 1.25;
+    }
+
+@media (min-width: 800px) {
+
+.generic-content-container p {
+            line-height: 1.65;
+            font-size: 1.125rem;
+            margin: 1.8 0
+    }
+    }
+
+.generic-content-container p a {
+        font-weight: 700; /*400 noraml bold*/
     }

@@ -1,9 +1,17 @@
 .headline {
     font-weight: 300;
-    font-size: 1.875rem;
+    font-size: 1.475rem;
     color: $mainBlue;
 
     @mixin smallScreen {
+        font-size: 1.875rem;
+    }
+
+    @mixin mediumScreen {
+        font-size: 2.275rem;
+    }
+
+    @mixin largeScreen {
         font-size: 2.875rem;
     }
 
@@ -42,5 +50,9 @@
 
     &--b-margin-large {
         margin-bottom: 1.6em;
+    }
+
+    &--t-margin-none {
+        margin-top: 0;
     }
 }

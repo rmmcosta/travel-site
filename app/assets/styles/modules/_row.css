@@ -1,0 +1,32 @@
+.row{
+    @mixin mediumScreen {
+        display: grid;
+        grid-template-columns: 4/12*100% 8/12*100%;
+        grid-template-areas:"sidebar content";
+    }
+
+    &--gutters {
+        grid-gap: 5%;
+    }
+
+    &__sidebar {
+        grid-area: sidebar;
+        margin: 0 auto;
+        text-align: center;
+    
+    }
+        
+    &__content {
+        grid-area: content;
+        position: relative;
+        text-align: left;
+    }
+
+    &__b-margin-until-medium {
+        margin-bottom: 0.5em;
+
+        @mixin mediumScreen {
+            margin-bottom: 0;
+        }
+    }
+}
