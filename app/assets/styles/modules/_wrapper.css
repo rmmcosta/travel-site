@@ -7,6 +7,10 @@
         max-width: 976px;
     }
 
+    &--medium-10 {
+        max-width: 83.33%;
+    }
+
     /* a wrapper inside the original wrapper*/
     .wrapper {
         padding: 0 0;
@@ -19,6 +23,10 @@
         @mixin smallScreen {
             margin-bottom: 4rem;
         }
+    }
+
+    &--align-center {
+        text-align: center;
     }
 
 }
