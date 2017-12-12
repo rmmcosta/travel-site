@@ -1,18 +1,33 @@
 .row{
+    
     @mixin mediumScreen {
         display: grid;
+    }
+
+    &-sidebar-content {
         grid-template-columns: 4/12*100% 8/12*100%;
         grid-template-areas:"sidebar content";
     }
 
+    &-cols2 {
+        grid-template-columns:46% 46%;
+    }
+
     &--gutters {
         grid-gap: 5%;
+
+        &-large {
+            grid-gap: 8%; 
+        }
     }
 
     &__sidebar {
         grid-area: sidebar;
         margin: 0 auto;
-        text-align: center;
+        
+        &--center {
+            text-align: center;
+        }
     
     }
         
@@ -28,5 +43,11 @@
         @mixin mediumScreen {
             margin-bottom: 0;
         }
+    }
+
+    .row-cols2 .row__content p {
+        font-size: 0.825rem;
+        line-height: 1.125rem;
+        font-weight: 200;
     }
 }

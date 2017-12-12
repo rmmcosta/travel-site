@@ -1,0 +1,41 @@
+.feature-item{
+    position: relative;
+    padding-bottom: 1.625rem;
+
+    @mixin smallScreen {
+        padding-left: 94px;
+    }
+
+    @mixin mediumScreen {
+        padding-bottom: 3.625rem;
+    }
+
+    &__icon {
+        display: block;
+        margin: 0 auto;
+
+        @mixin smallScreen {
+            position: absolute;
+            left: 0;
+        }
+
+    }
+
+    &__title {
+        font-size: 1.675rem;
+        font-weight: 300;
+        margin-top: .7em;
+        margin-bottom: 0.8rem;
+        text-align: center;
+
+        @mixin smallScreen {
+            text-align: left;
+        }
+
+        @mixin mediumScreen {
+            font-size: 1.875rem;
+            margin-top: 1em;
+        }
+
+    }
+}
