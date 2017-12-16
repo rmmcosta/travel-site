@@ -11,12 +11,18 @@
         font-weight: 500;
     }
 
+    &--blue {
+        color: $mainBlue;
+    }
+
     &__icon {
         display: block;
         margin: auto;
         margin-bottom: 0.6rem;
 
         @mixin smallScreen {
+            position: relative;
+            top: 8px;
             display: inline-block;
             margin: 0;
             margin-right: 1rem;

@@ -17,4 +17,14 @@
         background-color: $mainBlue;
         color: #fff;
     }
+
+    &--testimonials {
+
+        background-color: #e0e6ef;
+
+        @mixin largeScreen {
+            background: url("/assets/images/testimonials-bg.jpg") no-repeat center top;
+            background-size: cover;
+        }
+    }
 }

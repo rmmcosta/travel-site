@@ -3,12 +3,23 @@
     max-width: 1200px;
     margin: 0 auto;
 
+    &--no-padding-until-large {
+        padding:0;
+
+        @mixin largeScreen {
+            padding:0 18px;
+        }
+    }
+
     &--medium {
         max-width: 976px;
     }
 
-    &--medium-10 {
-        max-width: 83.33%;
+    &--medium-10-largeScreen {
+
+        @mixin largeScreen {
+            max-width: 83.33%;
+        }
     }
 
     /* a wrapper inside the original wrapper*/
