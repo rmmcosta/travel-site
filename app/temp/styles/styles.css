@@ -581,12 +581,26 @@ a {
 
 }
 
+.wrapper--no-padding-until-large {
+        padding:0;
+    }
+
+@media (min-width: 1010px) {
+
+.wrapper--no-padding-until-large {
+            padding:0 18px
+    }
+    }
+
 .wrapper--medium {
         max-width: 976px;
     }
 
-.wrapper--medium-10 {
-        max-width: 83.33%;
+@media (min-width: 1010px) {
+
+.wrapper--medium-10-largeScreen {
+            max-width: 83.33%
+    }
     }
 
 /* a wrapper inside the original wrapper*/
@@ -629,7 +643,7 @@ a {
 }
     }
 
-@media (min-width: 1200px) {
+@media (min-width: 1010px) {
 
 .page-section {
         padding: 4rem 0
@@ -642,8 +656,16 @@ a {
     }
 
 .page-section--testimonials {
-        background: url("/assets/images/testimonials-bg.jpg") no-repeat center top;
-        background-size: cover;
+
+        background-color: #e0e6ef;
+    }
+
+@media (min-width: 1010px) {
+
+.page-section--testimonials {
+            background: url("/assets/images/testimonials-bg.jpg") no-repeat center top;
+            background-size: cover
+    }
     }
 
 .page-footer {
@@ -682,7 +704,7 @@ a {
 }
     }
 
-@media (min-width: 1200px) {
+@media (min-width: 1010px) {
 
 .headline {
         font-size: 2.875rem
@@ -740,6 +762,10 @@ a {
 }
     }
 
+.row--t-padding-80 {
+        padding-top: 80px;
+    }
+
 .row-sidebar-content {
         grid-template-columns: 4/12*100% 8/12*100%;
         grid-template-areas:"sidebar content";
@@ -749,8 +775,11 @@ a {
         grid-template-columns:46% 46%;
     }
 
+@media (min-width: 1010px) {
+
 .row-cols3 {
-        grid-template-columns:1fr 1fr 1fr;
+            grid-template-columns:1fr 1fr 1fr
+    }
     }
 
 .row--gutters {
@@ -912,8 +941,26 @@ a {
 
 .testimonial {
     background-color: rgba(255, 255, 255, 0.8);
-    padding: 0 1.875rem 1px 1.875rem;
+    padding: 1.125rem;
 }
+
+@media (min-width: 1010px) {
+
+.testimonial {
+        padding: 0 1.875rem 1px 1.875rem
+}
+    }
+
+.testimonial--t-margin100-untilLargeScreen {
+        margin-top: 100px;
+    }
+
+@media (min-width: 1010px) {
+
+.testimonial--t-margin100-untilLargeScreen {
+            margin-top: 0
+    }
+    }
 
 .testimonial__photo {
         border-radius: 50%;

@@ -4,6 +4,10 @@
         display: grid;
     }
 
+    &--t-padding-80 {
+        padding-top: 80px;
+    }
+
     &-sidebar-content {
         grid-template-columns: 4/12*100% 8/12*100%;
         grid-template-areas:"sidebar content";
@@ -14,7 +18,10 @@
     }
 
     &-cols3 {
-        grid-template-columns:1fr 1fr 1fr;
+
+        @mixin largeScreen{
+            grid-template-columns:1fr 1fr 1fr;
+        }
     }
 
     &--gutters {
