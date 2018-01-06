@@ -30,4 +30,9 @@ gulp.task("watch", function() {
         gulp.start("cssInject"); //also add to cssInject task to run styles before the css inject
     });
 
+    watch("./app/assets/images/icons/**/", function(){
+        console.log("watch icons");
+        gulp.start("generateSprites");
+    });
+
 });
