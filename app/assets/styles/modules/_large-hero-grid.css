@@ -23,6 +23,7 @@
         color: $mainBlue;
         font-size: 2.4rem;
         margin: 0;
+        padding-top: 60px;
 
         @mixin smallScreen {
             font-size: 4.8rem;

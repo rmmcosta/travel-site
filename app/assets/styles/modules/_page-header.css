@@ -2,8 +2,33 @@
     position: absolute;
     width: 100%;
     z-index: 2;
-    background-color: rgba($mainBlue, .3);
-    padding: 10px 0;
+    
+
+    @mixin mediumScreen {
+        background-color: rgba($mainBlue, .3);
+        padding: 10px 0;
+    }
+
+    &__menu-icon {
+        width: 20px;
+        height: 20px;
+        background-color: #fff;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+
+        @mixin mediumScreen {
+            display: none;
+        }
+    }
+
+    &__menu-container {
+        display: none;
+
+        @mixin mediumScreen {
+            display: block;
+        }
+    }
 
     &__btn-container {
         float: right;
@@ -16,9 +41,17 @@
         padding: 25px 36px;
         text-align: center;
         top: 0;
+        left: 50%;
+        transform: translateX(-50%) scale(.8);
+        transform-origin: 50% 0;
 
-        span {
-            display: block;
+        @mixin mediumScreen {
+            left:auto;
+            transform: translateX(0) scale(1);
+        }
+
+        &__icon {
+            text-indent:-9999px;
         }
     }
 }
