@@ -12,3 +12,5 @@ c1.print();
 c2.print();
 
 jquery("h1").remove();
+
+alert("Aqui1");
