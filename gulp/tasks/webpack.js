@@ -2,7 +2,7 @@ var gulp = require("gulp"),
     webpack = require("webpack"),
     path = require("path"),
     stream = require("webpack-stream"),
-    config = require(path.resolve("",'./webpack.config.1.js'))
+    config = require(path.resolve("",'./webpack.config.js'))
 ;
 
 const paths = {
