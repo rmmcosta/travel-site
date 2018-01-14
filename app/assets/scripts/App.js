@@ -1,16 +1,20 @@
-const jquery = require("jquery");
+const P= require('./modules/Person');
 
-const Car = require('./modules/Car');
+const p1 = new P.A("Ana", "Blue");
+const p2 = new P.B("Ricardo", "Red");
 
-console.log(Car);
+p1.print();
+p2.print();
 
+p2.cry();
 
-const c1 = new Car("BMW", "Blue");
-const c2 = new Car("VW", "Red");
+// Basic literal string creation
+let x = `This is a pretty little template string.`;
 
-c1.print();
-c2.print();
+// Multiline strings
+let y = `In ES5 this is
+ not legal.`;
 
-jquery("h1").remove();
-
-alert("Aqui1");
+// Interpolate variable bindings
+var name = "Bob", time = "today";
+console.log(`Hello ${name}, how are you ${time}?`);
