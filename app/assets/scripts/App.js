@@ -1,7 +1,7 @@
-const P= require('./modules/Person');
+import {Person, Baby, Adult} from './modules/Person';
 
-const p1 = new P.A("Ana", "Blue");
-const p2 = new P.B("Ricardo", "Red");
+const p1 = new Adult("Ana", "Green");
+const p2 = new Baby("Ricardo", "Red");
 
 p1.print();
 p2.print();

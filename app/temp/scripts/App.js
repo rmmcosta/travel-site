@@ -70,10 +70,10 @@
 "use strict";
 
 
-var P = __webpack_require__(1);
+var _Person = __webpack_require__(1);
 
-var p1 = new P.A("Ana", "Blue");
-var p2 = new P.B("Ricardo", "Red");
+var p1 = new _Person.Adult("Ana", "Green");
+var p2 = new _Person.Baby("Ricardo", "Red");
 
 p1.print();
 p2.print();
@@ -97,6 +97,10 @@ console.log("Hello " + name + ", how are you " + time + "?");
 
 "use strict";
 
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -162,12 +166,9 @@ var Adult = function (_Person2) {
     return Adult;
 }(Person);
 
-var P = {
-    B: Baby,
-    A: Adult
-};
-
-module.exports = P;
+exports.Person = Person;
+exports.Baby = Baby;
+exports.Adult = Adult;
 
 /***/ })
 /******/ ]);

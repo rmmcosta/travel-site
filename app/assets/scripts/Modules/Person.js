@@ -21,10 +21,4 @@ class Adult extends Person {
     }
 }
 
-var P = {
-    B: Baby,
-    A: Adult
-}
-
-module.exports = P;
-
+export {Person, Baby, Adult};
