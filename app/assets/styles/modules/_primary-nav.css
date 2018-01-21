@@ -1,9 +1,16 @@
 .primary-nav {
 
+    padding: 10px 0;
 
+    @mixin mediumScreen {
+        padding: 0 0;
+    }
 
     &--pull-right {
-        float: right;
+
+        @mixin mediumScreen {
+            float: right;
+        }
     }
 
     ul {
@@ -14,8 +21,14 @@
 
     li {
         list-style: none;
-        float: left;
-        padding-right: 20px;
+        padding-right: 6px;
+        display: inline-block;
+
+        @mixin mediumScreen {
+            padding-right: 20px;
+            float: left;
+            display: block;
+        }
     }
 
     a {
@@ -23,6 +36,13 @@
         text-decoration: none;
         font-weight: 300;
         display: block;
-        padding:12px 0;
+        padding:5px 8px;
+        font-size: .8rem;
+        background-color: rgba($mainBlue, 0.5);
+
+        @mixin mediumScreen {
+            padding:12px 0;
+            background-color: transparent;
+        }
     }
 }
