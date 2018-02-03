@@ -2,36 +2,110 @@
     position: absolute;
     width: 100%;
     z-index: 2;
-    
+    transition: background-color 0.3s ease-out;
 
     @mixin mediumScreen {
         background-color: rgba($mainBlue, .3);
         padding: 10px 0;
     }
 
+    &--is-expanded {
+        background-color: rgba($mainBlue, .7);
+    }
+
     &__menu-icon {
         width: 20px;
-        height: 20px;
-        background-color: #fff;
+        height: 19px;
         position: absolute;
         top: 10px;
         right: 10px;
+        z-index: 10;
 
         @mixin mediumScreen {
             display: none;
         }
+
+        &::before {
+            content: "";
+            background-color: #fff;
+            width:20px;
+            height: 3px;
+            top:0;
+            left: 0;
+            position: absolute;
+            transform-origin: top left;
+            transition: transform .3s ease-out;
+        }
+
+        &__middle {
+            background-color: #fff;
+            width:20px;
+            height: 3px;
+            top:8px;
+            left: 0;
+            position: absolute;
+            transform-origin: top left;
+            transition: all .3s ease-out;
+        }
+
+        &::after {
+            content: "";
+            background-color: #fff;
+            width:20px;
+            height: 3px;
+            bottom: 0;
+            left: 0;
+            position: absolute;
+            transform-origin: bottom left;
+            transition: transform .3s ease-out;
+        }
+
+        &--close-x {
+
+            &::before {
+                transform: rotate(45deg) scaleX(1.2);
+            }
+
+            .page-header__menu-icon__middle {
+                opacity: 0;
+                transform: scaleX(0);
+            }
+
+            &::after {
+                transform: rotate(-45deg) scaleX(1.2);
+            }
+        }
     }
 
     &__menu-container {
-        display: none;
+        padding-top: 100px;
+        text-align: center;
+        opacity:0;
+        z-index:-10;
+        position: relative;
+        transform: scale(1.2);
+        transition: all .3s ease-out;
 
         @mixin mediumScreen {
-            display: block;
+            opacity:1;
+            z-index:1;
+            padding-top: 0;
+            text-align: none;
+            transform:scale(1);
+        }
+
+        &--is-visible {
+            opacity:1;
+            z-index:1;
+            transform:scale(1);
         }
     }
 
     &__btn-container {
-        float: right;
+
+        @mixin mediumScreen {
+            float: right;
+        }
     }
 
     &__logo {
