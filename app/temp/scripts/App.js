@@ -10340,9 +10340,10 @@ var _RevealOnScroll2 = _interopRequireDefault(_RevealOnScroll);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var mobileMenu = new _MobileMenu2.default();
-var revealOnScroll = new _RevealOnScroll2.default('.feature-item', '85%');
-var revealOnScroll1 = new _RevealOnScroll2.default('.testimonial', '80%');
+new _MobileMenu2.default();
+new _RevealOnScroll2.default('.feature-item', '85%');
+new _RevealOnScroll2.default('.testimonial', '80%');
+new _RevealOnScroll2.default('.');
 
 /***/ }),
 /* 2 */
@@ -10444,7 +10445,6 @@ var RevealOnScroll = function () {
                 var waypoint = new Waypoint({
                     element: currElem,
                     handler: function handler(direction) {
-                        console.log(direction);
                         if (direction == 'down') (0, _jquery2.default)(currElem).addClass('reveal-item--is-visible');else (0, _jquery2.default)(currElem).removeClass('reveal-item--is-visible');
                     },
                     offset: oSet

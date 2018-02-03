@@ -19,7 +19,6 @@ class RevealOnScroll {
             var waypoint = new Waypoint({
                 element: currElem,
                 handler: function(direction) {
-                console.log(direction);
                 if(direction == 'down')
                     $(currElem).addClass('reveal-item--is-visible');
                 else

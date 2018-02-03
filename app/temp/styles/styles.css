@@ -638,7 +638,8 @@ a {
 
 .page-header {
         background-color: rgba(47,85,114, .3);
-        padding: 10px 0
+        padding: 10px 0;
+        position: fixed
 }
     }
 
