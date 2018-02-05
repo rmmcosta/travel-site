@@ -1,6 +1,7 @@
 import MobileMenu from "./modules/MobileMenu";
 import RevealOnScroll from "./modules/RevealOnScroll";
 import DarkTheHeader from "./modules/DarkTheHeader";
+import HighLightLinks from "./modules/HighLightLinks";
 
 new MobileMenu();
 new RevealOnScroll('.feature-item','85%');
@@ -44,3 +45,6 @@ new DarkTheHeader('.page-header__logo','#features','page-header__logo--is-darker
 /*going up adds lighter on features*/
 new DarkTheHeader('.page-header','#features','page-header--is-lighter','up',true,'-100%');
 new DarkTheHeader('.page-header__logo','#features','page-header__logo--is-lighter','up',true,'-100%');
+
+/*********HighLightLinks*****/
+new HighLightLinks();

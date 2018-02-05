@@ -16,7 +16,7 @@ class RevealOnScroll {
         var elem = this.itemsToReveal;
         elem.each(function(){
             var currElem = this;
-            var waypoint = new Waypoint({
+            new Waypoint({
                 element: currElem,
                 handler: function(direction) {
                 if(direction == 'down')
