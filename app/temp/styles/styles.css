@@ -456,9 +456,14 @@ template {
 
 @media screen and (min-width: 64em) { }
 
+html {
+    overflow-x: hidden;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     color: #333;
+    overflow-x: hidden;
 }
 
 img {
@@ -653,20 +658,42 @@ a {
     }
 
 .page-header--is-darker {
-            background-color: rgba(6, 13, 44, 0.85) !important;
+        background-color: rgba(6, 13, 44, 0.85) !important;
     }
 
 .page-header--is-lighter {
-            background-color: rgba(30, 35, 66, 0.685) !important;
+        background-color: rgba(118, 120, 136, 0.9) !important;
     }
+
+.page-header__menu-bg {
+        background-color: transparent;
+        width: 20px;
+        height: 19px;
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        -webkit-transition: all .2s ease-out;
+        transition: all .2s ease-out;
+    }
+
+.page-header__menu-bg--is-darker {
+            background-color: rgba(6, 13, 44, 0.35);
+            height:32px;
+            width:30px;
+            position:fixed;
+            top: 4px;
+            right: 5px;
+        }
 
 .page-header__menu-icon {
         width: 20px;
         height: 19px;
-        position: absolute;
+        position: fixed;
         top: 10px;
         right: 10px;
         z-index: 10;
+        -webkit-transition: padding 0.5s ease-out;
+        transition: padding 0.5s ease-out;
     }
 
 @media (min-width: 800px) {
@@ -743,6 +770,8 @@ a {
         opacity:0;
         z-index:-10;
         position: relative;
+        -webkit-transform: scale(0.5);
+                transform: scale(0.5);
         -webkit-transition: all .3s ease-out;
         transition: all .3s ease-out;
     }
@@ -776,7 +805,7 @@ a {
 .page-header__logo {
         position: absolute;
         z-index: 3;
-        background-color: #2f5572;
+        background-color: rgba(47,85,114,1);
         padding: 25px 36px;
         text-align: center;
         top: 0;
@@ -791,19 +820,25 @@ a {
         transition: transform .3s ease-out, -webkit-transform .3s ease-out;
     }
 
+.page-header__logo--is-darker {
+            background-color: rgba(47,85,114,0);
+        }
+
 @media (min-width: 800px) {
 
 .page-header__logo--is-darker {
-                background-color: rgb(8, 12, 32) !important;
                 -webkit-transform: scale(.56) !important;
                         transform: scale(.56) !important
         }
     }
 
+.page-header__logo--is-lighter {
+            background-color: rgba(47,85,114,0);
+        }
+
 @media (min-width: 800px) {
 
 .page-header__logo--is-lighter {
-                background-color: rgb(30, 35, 66) !important;
                 -webkit-transform: scale(.56) !important;
                         transform: scale(.56) !important
         }

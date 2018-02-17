@@ -30,8 +30,8 @@ new DarkTheHeader('.page-header__logo','#testimonials','page-header__logo--is-da
 
 /**** going up */
 /*going up removes darker on large-hero*/
-new DarkTheHeader('.page-header','.large-hero','page-header--is-darker','up',false,'-100%');
-new DarkTheHeader('.page-header__logo','.large-hero','page-header__logo--is-darker','up',false,'-100%');
+new DarkTheHeader('.page-header','.large-hero','page-header--is-darker','up',false,'-50%');
+new DarkTheHeader('.page-header__logo','.large-hero','page-header__logo--is-darker','up',false,'-50%');
 
 /*going up adds darker on our-beginning*/
 new DarkTheHeader('.page-header','#features','page-header--is-darker','up',true,'0%');
@@ -41,11 +41,34 @@ new DarkTheHeader('.page-header','#features','page-header--is-lighter','up',fals
 new DarkTheHeader('.page-header__logo','#features','page-header__logo--is-lighter','up',false,'0%');
 
 /*going up removes darker on features*/
-new DarkTheHeader('.page-header','#features','page-header--is-darker','up',false,'-100%');
-new DarkTheHeader('.page-header__logo','#features','page-header__logo--is-darker','up',false,'-100%');
+new DarkTheHeader('.page-header','#features','page-header--is-darker','up',false,'-150%');
+new DarkTheHeader('.page-header__logo','#features','page-header__logo--is-darker','up',false,'-150%');
 /*going up adds lighter on features*/
-new DarkTheHeader('.page-header','#features','page-header--is-lighter','up',true,'-100%');
-new DarkTheHeader('.page-header__logo','#features','page-header__logo--is-lighter','up',true,'-100%');
+new DarkTheHeader('.page-header','#features','page-header--is-lighter','up',true,'-150%');
+new DarkTheHeader('.page-header__logo','#features','page-header__logo--is-lighter','up',true,'-150%');
+
+/****Mobile Menu */
+
+/**** going down */
+/*going down is getting darker on our-beginning*/
+new DarkTheHeader('.page-header__menu-bg','#our-beginning','page-header__menu-bg--is-darker','down',true,'25%');
+
+/*going down removes darker on features*/
+new DarkTheHeader('.page-header__menu-bg','#features','page-header__menu-bg--is-darker','down',false,'4%');
+
+/*going down adds darker on testimonials*/
+new DarkTheHeader('.page-header__menu-bg','#testimonials', 'page-header__menu-bg--is-darker','down',true,'25%');
+
+
+/**** going up */
+/*going up removes darker on large-hero*/
+new DarkTheHeader('.page-header__menu-bg','.large-hero','page-header__menu-bg--is-darker','up',false,'-50%');
+
+/*going up adds darker on our-beginning*/
+new DarkTheHeader('.page-header__menu-bg','#features','page-header__menu-bg--is-darker','up',true,'0%');
+
+/*going up removes darker on features*/
+new DarkTheHeader('.page-header__menu-bg','#testimonials','page-header__menu-bg--is-darker','up',false,'0%');
 
 /*********HighLightLinks*****/
 new HighLightLinks();

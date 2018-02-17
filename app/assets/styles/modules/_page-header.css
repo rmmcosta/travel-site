@@ -1,3 +1,5 @@
+$mobileMenuColor: #fff;
+
 .page-header {
     position: absolute;
     width: 100%;
@@ -16,20 +18,40 @@
     }
 
     &--is-darker {
-            background-color: rgba(6, 13, 44, 0.85) !important;
+        background-color: rgba(6, 13, 44, 0.85) !important;
     }
 
     &--is-lighter {
-            background-color: rgba(30, 35, 66, 0.685) !important;
+        background-color: rgba(118, 120, 136, 0.9) !important;
+    }
+
+    &__menu-bg {
+        background-color: transparent;
+        width: 20px;
+        height: 19px;
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        transition: all .2s ease-out;
+
+        &--is-darker {
+            background-color: rgba(6, 13, 44, 0.35);
+            height:32px;
+            width:30px;
+            position:fixed;
+            top: 4px;
+            right: 5px;
+        }
     }
 
     &__menu-icon {
         width: 20px;
         height: 19px;
-        position: absolute;
+        position: fixed;
         top: 10px;
         right: 10px;
         z-index: 10;
+        transition: padding 0.5s ease-out;
 
         @mixin mediumScreen {
             display: none;
@@ -37,7 +59,7 @@
 
         &::before {
             content: "";
-            background-color: #fff;
+            background-color: $mobileMenuColor;
             width:20px;
             height: 3px;
             top:0;
@@ -48,7 +70,7 @@
         }
 
         &__middle {
-            background-color: #fff;
+            background-color: $mobileMenuColor;
             width:20px;
             height: 3px;
             top:8px;
@@ -60,7 +82,7 @@
 
         &::after {
             content: "";
-            background-color: #fff;
+            background-color: $mobileMenuColor;
             width:20px;
             height: 3px;
             bottom: 0;
@@ -93,6 +115,7 @@
         opacity:0;
         z-index:-10;
         position: relative;
+        transform: scale(0.5);
         transition: all .3s ease-out;
 
         @mixin mediumScreen {
@@ -120,7 +143,7 @@
     &__logo {
         position: absolute;
         z-index: 3;
-        background-color: $mainBlue;
+        background-color: rgba($mainBlue,1);
         padding: 25px 36px;
         text-align: center;
         top: 0;
@@ -130,23 +153,22 @@
         transition: transform .3s ease-out;
 
         &--is-darker {
+            background-color: rgba($mainBlue,0) !important;
             @mixin mediumScreen {
-                background-color: rgb(8, 12, 32) !important;
                 transform: scale(.56) !important;
             }
         }
     
         &--is-lighter {
+            background-color: rgba($mainBlue,0);
             @mixin mediumScreen {
-                background-color: rgb(30, 35, 66) !important;
                 transform: scale(.56) !important;
             }
         }
 
         @mixin mediumScreen {
             left:auto;
-            transform: translateX(0) scale(1);
-            
+            transform: translateX(0) scale(1);         
         }
 
         &__icon {
