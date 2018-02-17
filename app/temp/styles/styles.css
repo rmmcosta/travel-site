@@ -652,18 +652,12 @@ a {
         position: fixed;
     }
 
-@media (min-width: 800px) {
-
 .page-header--is-darker {
-            background-color: rgba(8, 12, 32, 0.85) !important
+            background-color: rgba(6, 13, 44, 0.85) !important;
     }
-    }
-
-@media (min-width: 800px) {
 
 .page-header--is-lighter {
-            background-color: rgba(30, 35, 66, 0.685) !important
-    }
+            background-color: rgba(30, 35, 66, 0.685) !important;
     }
 
 .page-header__menu-icon {
@@ -749,8 +743,6 @@ a {
         opacity:0;
         z-index:-10;
         position: relative;
-        -webkit-transform: scale(1.2);
-                transform: scale(1.2);
         -webkit-transition: all .3s ease-out;
         transition: all .3s ease-out;
     }
