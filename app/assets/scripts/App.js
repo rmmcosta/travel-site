@@ -2,6 +2,7 @@ import MobileMenu from "./modules/MobileMenu";
 import RevealOnScroll from "./modules/RevealOnScroll";
 import DarkTheHeader from "./modules/DarkTheHeader";
 import HighLightLinks from "./modules/HighLightLinks";
+import RevealModal from "./modules/RevealModal";
 
 new MobileMenu();
 new RevealOnScroll('.feature-item','85%');
@@ -48,3 +49,7 @@ new DarkTheHeader('.page-header__logo','#features','page-header__logo--is-lighte
 
 /*********HighLightLinks*****/
 new HighLightLinks();
+
+
+/******Get in Touch */
+new RevealModal("btn_GetInTouch","modal","modal--is-visible");

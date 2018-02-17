@@ -11,15 +11,20 @@
     }
 
     &--is-expanded {
-        background-color: rgba($mainBlue, .7);
+        background-color: rgba($mainBlue, .7) !important;
+        position: fixed;
     }
 
     &--is-darker {
-        background-color: rgba(8, 12, 32, 0.85) !important;
+        @mixin mediumScreen {
+            background-color: rgba(8, 12, 32, 0.85) !important;
+        }
     }
 
     &--is-lighter {
-        background-color: rgba(30, 35, 66, 0.685) !important;
+        @mixin mediumScreen {
+            background-color: rgba(30, 35, 66, 0.685) !important;
+        }
     }
 
     &__menu-icon {
@@ -130,13 +135,17 @@
         transition: transform .3s ease-out;
 
         &--is-darker {
-            background-color: rgb(8, 12, 32) !important;
-            transform: scale(.56) !important;
+            @mixin mediumScreen {
+                background-color: rgb(8, 12, 32) !important;
+                transform: scale(.56) !important;
+            }
         }
     
         &--is-lighter {
-            background-color: rgb(30, 35, 66) !important;
-            transform: scale(.56) !important;
+            @mixin mediumScreen {
+                background-color: rgb(30, 35, 66) !important;
+                transform: scale(.56) !important;
+            }
         }
 
         @mixin mediumScreen {

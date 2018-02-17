@@ -11109,6 +11109,10 @@ var _HighLightLinks = __webpack_require__(6);
 
 var _HighLightLinks2 = _interopRequireDefault(_HighLightLinks);
 
+var _RevealModal = __webpack_require__(8);
+
+var _RevealModal2 = _interopRequireDefault(_RevealModal);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 new _MobileMenu2.default();
@@ -11155,6 +11159,9 @@ new _DarkTheHeader2.default('.page-header__logo', '#features', 'page-header__log
 
 /*********HighLightLinks*****/
 new _HighLightLinks2.default();
+
+/******Get in Touch */
+new _RevealModal2.default("btn_GetInTouch", "modal", "modal--is-visible");
 
 /***/ }),
 /* 3 */
@@ -11789,6 +11796,54 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 }));
 
 
+
+/***/ }),
+/* 8 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var RevealModal = function () {
+    function RevealModal(btnId, contentClass, visibleClass) {
+        _classCallCheck(this, RevealModal);
+
+        this.content = (0, _jquery2.default)("." + contentClass);
+        this.btn = (0, _jquery2.default)("#" + btnId);
+        this.action(this.content, visibleClass);
+    }
+
+    _createClass(RevealModal, [{
+        key: "action",
+        value: function action(content, visibleClass) {
+            this.btn.click(function () {
+                content.addClass(visibleClass);
+            });
+
+            content.click(function () {
+                content.removeClass(visibleClass);
+            });
+        }
+    }]);
+
+    return RevealModal;
+}();
+
+exports.default = RevealModal;
 
 /***/ })
 /******/ ]);
