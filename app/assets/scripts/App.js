@@ -75,4 +75,4 @@ new HighLightLinks();
 
 
 /******Get in Touch */
-new RevealModal("btn_GetInTouch","modal","modal--is-visible");
+new RevealModal("openModal","modal","modal--is-visible");

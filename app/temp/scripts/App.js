@@ -11294,7 +11294,7 @@ new _DarkTheHeader2.default('.page-header__menu-bg', '#testimonials', 'page-head
 new _HighLightLinks2.default();
 
 /******Get in Touch */
-new _RevealModal2.default("btn_GetInTouch", "modal", "modal--is-visible");
+new _RevealModal2.default("openModal", "modal", "modal--is-visible");
 
 /***/ }),
 /* 3 */
@@ -11953,24 +11953,39 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var RevealModal = function () {
-    function RevealModal(btnId, contentClass, visibleClass) {
+    function RevealModal(btnClass, contentClass, visibleClass) {
         _classCallCheck(this, RevealModal);
 
         this.content = (0, _jquery2.default)("." + contentClass);
-        this.btn = (0, _jquery2.default)("#" + btnId);
-        this.action(this.content, visibleClass);
+        this.btn = (0, _jquery2.default)("." + btnClass);
+        this.visibleClass = visibleClass;
+        this.events();
     }
 
     _createClass(RevealModal, [{
-        key: "action",
-        value: function action(content, visibleClass) {
-            this.btn.click(function () {
-                content.addClass(visibleClass);
-            });
+        key: "events",
+        value: function events() {
+            this.btn.click(this.openModal.bind(this));
 
-            content.click(function () {
-                content.removeClass(visibleClass);
-            });
+            this.content.click(this.closeModal.bind(this));
+
+            (0, _jquery2.default)(document).keyup(this.keyUpHandler.bind(this));
+        }
+    }, {
+        key: "keyUpHandler",
+        value: function keyUpHandler(evt) {
+            if (evt.keyCode == 27) this.closeModal();
+        }
+    }, {
+        key: "openModal",
+        value: function openModal() {
+            this.content.addClass(this.visibleClass);
+            return false;
+        }
+    }, {
+        key: "closeModal",
+        value: function closeModal() {
+            this.content.removeClass(this.visibleClass);
         }
     }]);
 

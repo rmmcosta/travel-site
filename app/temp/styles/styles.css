@@ -1416,7 +1416,8 @@ Instead use the gulp/templates/sprite.css*/
 
 .modal {
     position: fixed; /* Sit on top of the page content */
-    display: none; /* Hidden by default */
+    opacity: 0; /* Hidden by default */
+    visibility: hidden;
     width: 100%; /* Full width (cover the whole page) */
     height: 100%; /* Full height (cover the whole page) */
     top: 0; 
@@ -1426,14 +1427,15 @@ Instead use the gulp/templates/sprite.css*/
     background-color: rgba(255,255,255,.95); /* Black background with opacity */
     z-index: 5; /* Specify a stack order in case you're using a different order for other elements */
     cursor: pointer; /* Add a pointer on hover */
-    -webkit-transform: scale(0.1);
-            transform: scale(0.1);
-    -webkit-transition: all 1.5s ease-out;
-    transition: all 1.5s ease-out;
+    -webkit-transform: scale(.1);
+            transform: scale(.1);
+    -webkit-transition: all .3s ease-in;
+    transition: all .3s ease-in;
 }
 
 .modal--is-visible {
-        display: block;
+        opacity: 1;
+        visibility: visible;
         -webkit-transform: scale(1);
                 transform: scale(1);
     }
@@ -1447,6 +1449,7 @@ Instead use the gulp/templates/sprite.css*/
 
 .social-icons {
     text-align:center;
+    z-index: 999;
 }
 
 .social-icons__icon {

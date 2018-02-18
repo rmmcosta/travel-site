@@ -1,20 +1,33 @@
 import $ from "jquery";
 
 class RevealModal {
-    constructor(btnId, contentClass, visibleClass) {
+    constructor(btnClass, contentClass, visibleClass) {
         this.content = $("."+contentClass);
-        this.btn = $("#"+btnId);
-        this.action(this.content, visibleClass);
+        this.btn = $("."+btnClass);
+        this.visibleClass = visibleClass;
+        this.events();
     }
 
-    action(content, visibleClass){
-        this.btn.click(function(){
-            content.addClass(visibleClass);
-        });
+    events(){
+        this.btn.click(this.openModal.bind(this));
 
-        content.click(function(){
-            content.removeClass(visibleClass);
-        });
+        this.content.click(this.closeModal.bind(this));
+        
+        $(document).keyup(this.keyUpHandler.bind(this));
+    }
+
+    keyUpHandler(evt) {
+        if(evt.keyCode == 27)
+            this.closeModal();
+    }
+
+    openModal(){
+        this.content.addClass(this.visibleClass);
+        return false;
+    }
+
+    closeModal(){
+        this.content.removeClass(this.visibleClass);
     }
 }
 

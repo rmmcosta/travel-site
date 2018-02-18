@@ -1,5 +1,6 @@
 .social-icons {
     text-align:center;
+    z-index: 999;
 
     &__icon {
         background-color:$mainOrange;
