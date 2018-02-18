@@ -3,6 +3,7 @@ import $ from "jquery";
 class MobileMenu  {
     constructor () {
         this.pageHeader = $(".page-header");
+        this.menuBg = $(".page-header__menu-bg")
         this.menuIcon = $(".page-header__menu-icon");
         this.menuLinks = $(".page-header__menu-container");
         this.pNav = $(".primary-nav");
@@ -10,7 +11,7 @@ class MobileMenu  {
     }
 
     events() {
-        this.menuIcon.click(this.toggleMenu.bind(this)); //bind is used to change the this context inside the called function
+        this.menuBg.click(this.toggleMenu.bind(this)); //bind is used to change the this context inside the called function
     }
 
     toggleMenu(){

@@ -11322,6 +11322,7 @@ var MobileMenu = function () {
         _classCallCheck(this, MobileMenu);
 
         this.pageHeader = (0, _jquery2.default)(".page-header");
+        this.menuBg = (0, _jquery2.default)(".page-header__menu-bg");
         this.menuIcon = (0, _jquery2.default)(".page-header__menu-icon");
         this.menuLinks = (0, _jquery2.default)(".page-header__menu-container");
         this.pNav = (0, _jquery2.default)(".primary-nav");
@@ -11331,7 +11332,7 @@ var MobileMenu = function () {
     _createClass(MobileMenu, [{
         key: "events",
         value: function events() {
-            this.menuIcon.click(this.toggleMenu.bind(this)); //bind is used to change the this context inside the called function
+            this.menuBg.click(this.toggleMenu.bind(this)); //bind is used to change the this context inside the called function
         }
     }, {
         key: "toggleMenu",
