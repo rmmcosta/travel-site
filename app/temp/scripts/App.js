@@ -11497,14 +11497,23 @@ var HighLightLinks = function () {
     function HighLightLinks() {
         _classCallCheck(this, HighLightLinks);
 
+        this.lazyImages = (0, _jquery2.default)(".lazyload");
         this.pageSections = (0, _jquery2.default)(".page-section");
         this.links = (0, _jquery2.default)(".primary-nav a");
         this.largeHero = (0, _jquery2.default)(".large-hero");
         this.highLightLinks();
         this.smoothLinks();
+        this.refreshWaypoints();
     }
 
     _createClass(HighLightLinks, [{
+        key: "refreshWaypoints",
+        value: function refreshWaypoints() {
+            this.lazyImages.on("load", function () {
+                Waypoint.refreshAll();
+            });
+        }
+    }, {
         key: "smoothLinks",
         value: function smoothLinks() {
             this.links.smoothScroll({ easing: 'swing',

@@ -4,11 +4,19 @@ import waypoints from "../../../../node_modules/waypoints/lib/noframework.waypoi
 
 class HighLightLinks {
     constructor() {
+        this.lazyImages = $(".lazyload");
         this.pageSections = $(".page-section");
         this.links = $(".primary-nav a");
         this.largeHero = $(".large-hero");
         this.highLightLinks();
         this.smoothLinks();
+        this.refreshWaypoints();
+    }
+
+    refreshWaypoints(){
+        this.lazyImages.on("load", function(){
+            Waypoint.refreshAll();
+        });
     }
 
     smoothLinks() {
