@@ -4,7 +4,7 @@ var gulp = require("gulp"),
     config = require(path.resolve("","webpack.config"))
 ;
 
-gulp.task('scripts', function(callback) {
+gulp.task('scripts', ["modernizr"], function(callback) {
     webpack(config, function(err, stats){
         if(err) {
             console.log(err.toString());

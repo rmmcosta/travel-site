@@ -8,7 +8,7 @@ var gulp = require("gulp"),
     cssimport = require("postcss-import")
 ;
 
-gulp.task("styles", function(){
+gulp.task("styles",function(){
 	//ass or PostCSS tasks running here
 	return gulp.src("./app/assets/styles/styles.css")
         .pipe(postcss([cssimport, cssvars, mixins, nested, hexrgba, autoprefixer]))
@@ -17,7 +17,7 @@ gulp.task("styles", function(){
             console.log(errorInfo.toString());
             this.emit("end");
         })
-		.pipe(gulp.dest("./app/temp/styles")); 
+        .pipe(gulp.dest("./app/temp/styles"));
 });
 
 gulp.task("TestStyles", function(){
