@@ -17,11 +17,11 @@ $mobileMenuColor: #fff;
         position: fixed;
     }
 
-    &--is-darker {
+    .cssgrid &--is-darker {
         background-color: rgba(45, 53, 90, 0.85) !important;
     }
 
-    &--is-lighter {
+    .cssgrid &--is-lighter {
         background-color: rgba(118, 120, 136, 0.9) !important;
     }
 
@@ -35,7 +35,7 @@ $mobileMenuColor: #fff;
         z-index: 999;
         transition: all .2s ease-out;
 
-        &--is-darker {
+        .cssgrid &--is-darker {
             background-color: rgba(6, 13, 44, 0.35);
             height:32px;
             width:30px;
@@ -155,14 +155,14 @@ $mobileMenuColor: #fff;
         transform-origin: 50% 0;
         transition: transform .3s ease-out;
 
-        &--is-darker {
+        .cssgrid &--is-darker {
             background-color: rgba($mainBlue,0) !important;
             @mixin mediumScreen {
                 transform: scale(.56) !important;
             }
         }
     
-        &--is-lighter {
+        .cssgrid &--is-lighter {
             background-color: rgba($mainBlue,0);
             @mixin mediumScreen {
                 transform: scale(.56) !important;

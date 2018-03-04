@@ -1,6 +1,7 @@
 var gulp = require("gulp"),
     watch = require("gulp-watch"),
-	browserSync = require("browser-sync").create()
+    browserSync = require("browser-sync").create(),
+    devip = require('dev-ip');
 ;
 
 gulp.task("watch", function() {
@@ -10,7 +11,8 @@ gulp.task("watch", function() {
         notify: false,
         server: {
             baseDir: "app"
-        }
+        },
+        host: devip()
     });
 
     watch("./app/index.html", function() {

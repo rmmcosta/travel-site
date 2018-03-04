@@ -1,4 +1,4 @@
-.feature-item{
+.csstransitions .feature-item{
     position: relative;
     padding-bottom: 1.625rem;
     opacity:0;
@@ -45,4 +45,10 @@
         }
 
     }
+}
+
+.no-csstransitions .feature-item, .no-csstransforms  .feature-item{
+    position: relative;
+    padding-bottom: 1.625rem;
+    opacity:1;
 }

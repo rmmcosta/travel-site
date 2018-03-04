@@ -24,3 +24,7 @@ a {
 .b-margin-none {
     margin-bottom: 0;
 }
+
+.no-picture picture {
+    display: block;
+}

@@ -1,4 +1,4 @@
-.row{
+.cssgrid .row {
     
     @mixin mediumScreen {
         display: grid;
@@ -46,6 +46,72 @@
         grid-area: content;
         position: relative;
         text-align: left;
+    }
+
+    &__b-margin-until-medium {
+        margin-bottom: 0.5em;
+
+        @mixin mediumScreen {
+            margin-bottom: 0;
+        }
+    }
+
+    .row-cols2 .row__content p {
+        font-size: 0.825rem;
+        line-height: 1.125rem;
+        font-weight: 200;
+    }
+}
+
+.no-cssgrid .row {
+    
+    @mixin mediumScreen {
+        display: block;
+    }
+
+    &--t-padding-80 {
+        padding-top: 80px;
+    }
+
+    &-sidebar-content {
+        display:inline-block;
+        width:100%;
+    }
+
+    &-cols2 {
+        width: 100%;
+    }
+
+    &-cols3 {
+
+        @mixin largeScreen{
+            display:inline-block;
+            width:100%;
+        }
+    }
+
+    &--gutters {
+
+        &-large {
+        }
+    }
+
+    &__sidebar {
+        margin: 0 auto;
+        float: left;
+        width: 30%;
+        
+        &--center {
+            text-align: center;
+        }
+    
+    }
+        
+    &__content {
+        text-align: left;
+        float: left;
+        width: 69%;
+        margin-left: 1%;
     }
 
     &__b-margin-until-medium {

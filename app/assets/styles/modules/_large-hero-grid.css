@@ -1,4 +1,4 @@
-.large-hero {
+.cssgrid .large-hero {
     position: relative;
     /*childs center vertically*/
     display: flex;
@@ -56,3 +56,66 @@
         }
     }
 }
+
+.no-cssgrid .large-hero {
+    position: relative;
+  
+    &__text-content {
+
+        top: 10%;
+        position: absolute;
+        text-align: center;
+        width: 50%;
+        margin-left: 25%;
+        line-height: 0.70;
+
+        @mixin mediumScreen {
+            top: 25%;
+            line-height: 1;
+        }
+    }
+  
+    &__title {
+      font-weight: 300;
+      color: $mainBlue;
+      margin: 0;
+      font-size: 1.1rem;
+      padding-top: 60px;
+    
+      @mixin smallScreen {
+        font-size: 2rem;
+      }
+  
+      @mixin mediumScreen {
+        font-size: 3.2rem;
+      }
+  
+      @mixin largeScreen {
+        font-size: 4.8rem;
+      }
+  
+    }
+  
+    &__subtitle {
+      font-weight: 300;
+      color: $mainBlue;
+      font-size: 1.1rem;
+      margin: 0;
+  
+      @mixin smallScreen {
+        font-size: 2.9rem;
+      }
+  
+    }
+  
+    &__description {
+      color: #FFF;
+      font-size: 1.875rem;
+      font-weight: 100;
+      text-shadow: 2px 2px 0 rgba(0, 0, 0, .1);
+      max-width: 30rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  
+  }
