@@ -24,7 +24,7 @@
 
         @mixin largeScreen {
             &.lazyloaded {
-                background: url("/assets/images/testimonials-bg.jpg") no-repeat center top;
+                background: url("../../assets/images/testimonials-bg.jpg") no-repeat center top;
                 background-size: cover;
             }
         }
