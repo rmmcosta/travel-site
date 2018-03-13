@@ -399,6 +399,13 @@ a {
         text-align: center;
     }
 
+@media (min-width: 1200px) {
+
+.cssgrid .large-hero__text-content {
+            margin-top: -100px
+    }
+    }
+
 .cssgrid .large-hero__title {
         font-weight: 300;
         color: #2f5572;
@@ -411,6 +418,13 @@ a {
 
 .cssgrid .large-hero__title {
             font-size: 4.8rem
+    }
+    }
+
+@media (min-width: 800px) {
+
+.cssgrid .large-hero__title {
+            padding-top: 0px
     }
     }
 
@@ -470,7 +484,7 @@ a {
     }
 
 .no-cssgrid .large-hero__title {
-      font-weight: 300;
+      font-weight: 800;
       color: #2f5572;
       margin: 0;
       font-size: 1.1rem;
@@ -489,7 +503,8 @@ a {
 @media (min-width: 800px) {
 
 .no-cssgrid .large-hero__title {
-        font-size: 3.2rem
+        font-size: 3.2rem;
+        padding-top: 0px
   
     }
     }
@@ -649,6 +664,7 @@ a {
     }
 
 .cssgrid .page-header__menu-bg--is-darker {
+
             background-color: rgba(6, 13, 44, 0.35);
             height:32px;
             width:30px;
@@ -656,6 +672,13 @@ a {
             top: 4px;
             right: 5px;
         }
+
+@media (min-width: 800px) {
+
+.cssgrid .page-header__menu-bg--is-darker {
+                display: none
+        }
+    }
 
 .page-header__menu-icon {
         width: 20px;

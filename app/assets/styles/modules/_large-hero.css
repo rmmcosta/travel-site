@@ -23,7 +23,6 @@
       color: $mainBlue;
       margin: 0;
       font-size: 1.1rem;
-      padding-top: 60px;
     
       @mixin atSmall {
         font-size: 2rem;

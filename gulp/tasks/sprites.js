@@ -64,4 +64,4 @@ gulp.task('svg2png', ["copySpriteSVG"], function () {
         .pipe(gulp.dest('./app/assets/images/sprites'));
 });
 
-gulp.task("generateSprites", ["beginClean", "createSprites", "copySpriteSVG", "copySpriteCSS", "endClean","svg2png"]);
+gulp.task("sprites", ["beginClean", "createSprites", "copySpriteSVG", "copySpriteCSS", "endClean","svg2png"]);

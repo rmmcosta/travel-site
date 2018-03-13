@@ -30,22 +30,22 @@ new DarkTheHeader('.page-header__logo','#testimonials','page-header__logo--is-da
 
 /**** going up */
 /*going up removes darker on large-hero*/
-new DarkTheHeader('.page-header','.large-hero','page-header--is-darker','up',false,'-50%');
-new DarkTheHeader('.page-header__logo','.large-hero','page-header__logo--is-darker','up',false,'-50%');
+new DarkTheHeader('.page-header','#our-beginning','page-header--is-darker','up',false,'25%');
+new DarkTheHeader('.page-header__logo','#our-beginning','page-header__logo--is-darker','up',false,'25%');
 
 /*going up adds darker on our-beginning*/
-new DarkTheHeader('.page-header','#features','page-header--is-darker','up',true,'0%');
-new DarkTheHeader('.page-header__logo','#features','page-header__logo--is-darker','up',true,'0%');
+new DarkTheHeader('.page-header','#features','page-header--is-darker','up',true,'25%');
+new DarkTheHeader('.page-header__logo','#features','page-header__logo--is-darker','up',true,'25%');
 /*going up removes lighter on our-beginning*/
-new DarkTheHeader('.page-header','#features','page-header--is-lighter','up',false,'0%');
-new DarkTheHeader('.page-header__logo','#features','page-header__logo--is-lighter','up',false,'0%');
+new DarkTheHeader('.page-header','#features','page-header--is-lighter','up',false,'25%');
+new DarkTheHeader('.page-header__logo','#features','page-header__logo--is-lighter','up',false,'25%');
 
 /*going up removes darker on features*/
-new DarkTheHeader('.page-header','#features','page-header--is-darker','up',false,'-150%');
-new DarkTheHeader('.page-header__logo','#features','page-header__logo--is-darker','up',false,'-150%');
+new DarkTheHeader('.page-header','#testimonials','page-header--is-darker','up',false,'25%');
+new DarkTheHeader('.page-header__logo','#testimonials','page-header__logo--is-darker','up',false,'25%');
 /*going up adds lighter on features*/
-new DarkTheHeader('.page-header','#features','page-header--is-lighter','up',true,'-150%');
-new DarkTheHeader('.page-header__logo','#features','page-header__logo--is-lighter','up',true,'-150%');
+new DarkTheHeader('.page-header','#testimonials','page-header--is-lighter','up',true,'25%');
+new DarkTheHeader('.page-header__logo','#testimonials','page-header__logo--is-lighter','up',true,'25%');
 
 /****Mobile Menu */
 

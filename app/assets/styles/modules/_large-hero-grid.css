@@ -16,6 +16,10 @@
         /*center horizontally*/
         width: 100%;
         text-align: center;
+
+        @mixin veryLargeScreen {
+            margin-top: -100px;
+        }
     }
 
     &__title {
@@ -27,6 +31,10 @@
 
         @mixin smallScreen {
             font-size: 4.8rem;
+        }
+
+        @mixin mediumScreen {
+            padding-top: 0px;
         }
     }
 
@@ -76,7 +84,7 @@
     }
   
     &__title {
-      font-weight: 300;
+      font-weight: 800;
       color: $mainBlue;
       margin: 0;
       font-size: 1.1rem;
@@ -88,6 +96,7 @@
   
       @mixin mediumScreen {
         font-size: 3.2rem;
+        padding-top: 0px;
       }
   
       @mixin largeScreen {

@@ -1,7 +1,7 @@
 var gulp = require("gulp"),
     watch = require("gulp-watch"),
     browserSync = require("browser-sync").create(),
-    devip = require('dev-ip');
+    devip = require('dev-ip')
 ;
 
 gulp.task("watch", function() {
@@ -25,7 +25,7 @@ gulp.task("watch", function() {
     });
 
     watch("./app/assets/scripts/**/*.js", function(){
-        gulp.start("scriptsRefresh");
+        gulp.start("scripts");
     });
 
     /*watch("./app/temp/scripts/modernizr.js", function(){
@@ -41,11 +41,7 @@ gulp.task("watch", function() {
 
 });
 
-gulp.task("cssInject", ["styles","scriptsRefresh"], function(){
+gulp.task("cssInject", ["styles"], function(){
 	return gulp.src("./app/temp/styles/styles.css")
 		.pipe(browserSync.stream());
-});
-
-gulp.task("scriptsRefresh", ["scripts"], function(){
-    browserSync.reload();
 });

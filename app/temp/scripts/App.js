@@ -11251,22 +11251,22 @@ new _DarkTheHeader2.default('.page-header__logo', '#testimonials', 'page-header_
 
 /**** going up */
 /*going up removes darker on large-hero*/
-new _DarkTheHeader2.default('.page-header', '.large-hero', 'page-header--is-darker', 'up', false, '-50%');
-new _DarkTheHeader2.default('.page-header__logo', '.large-hero', 'page-header__logo--is-darker', 'up', false, '-50%');
+new _DarkTheHeader2.default('.page-header', '#our-beginning', 'page-header--is-darker', 'up', false, '25%');
+new _DarkTheHeader2.default('.page-header__logo', '#our-beginning', 'page-header__logo--is-darker', 'up', false, '25%');
 
 /*going up adds darker on our-beginning*/
-new _DarkTheHeader2.default('.page-header', '#features', 'page-header--is-darker', 'up', true, '0%');
-new _DarkTheHeader2.default('.page-header__logo', '#features', 'page-header__logo--is-darker', 'up', true, '0%');
+new _DarkTheHeader2.default('.page-header', '#features', 'page-header--is-darker', 'up', true, '25%');
+new _DarkTheHeader2.default('.page-header__logo', '#features', 'page-header__logo--is-darker', 'up', true, '25%');
 /*going up removes lighter on our-beginning*/
-new _DarkTheHeader2.default('.page-header', '#features', 'page-header--is-lighter', 'up', false, '0%');
-new _DarkTheHeader2.default('.page-header__logo', '#features', 'page-header__logo--is-lighter', 'up', false, '0%');
+new _DarkTheHeader2.default('.page-header', '#features', 'page-header--is-lighter', 'up', false, '25%');
+new _DarkTheHeader2.default('.page-header__logo', '#features', 'page-header__logo--is-lighter', 'up', false, '25%');
 
 /*going up removes darker on features*/
-new _DarkTheHeader2.default('.page-header', '#features', 'page-header--is-darker', 'up', false, '-150%');
-new _DarkTheHeader2.default('.page-header__logo', '#features', 'page-header__logo--is-darker', 'up', false, '-150%');
+new _DarkTheHeader2.default('.page-header', '#testimonials', 'page-header--is-darker', 'up', false, '25%');
+new _DarkTheHeader2.default('.page-header__logo', '#testimonials', 'page-header__logo--is-darker', 'up', false, '25%');
 /*going up adds lighter on features*/
-new _DarkTheHeader2.default('.page-header', '#features', 'page-header--is-lighter', 'up', true, '-150%');
-new _DarkTheHeader2.default('.page-header__logo', '#features', 'page-header__logo--is-lighter', 'up', true, '-150%');
+new _DarkTheHeader2.default('.page-header', '#testimonials', 'page-header--is-lighter', 'up', true, '25%');
+new _DarkTheHeader2.default('.page-header__logo', '#testimonials', 'page-header__logo--is-lighter', 'up', true, '25%');
 
 /****Mobile Menu */
 
